@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LOAD TAILWIND CSS & FONT -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'], 
+                    },
+                },
+            },
+        };
+     </script>
+
+    <!-- LOAD QRCODE.JS LIBRARY  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="crossorigin="anonymous"referrerpolicy="no-referrer"></script>
+
+    <!-- LOAD JS -->
+    <script src="js/script.js" defer></script><!-- 'defer' attribute in the <script> tag ensures that the script is executed only after the HTML document has been fully parsed.  
+        
+    When to Use defer:
+    If your script modifies DOM elements and you want to ensure the elements are available.
+
+    If you want to improve page load performance by allowing the HTML parsing to proceed uninterrupted by script execution. -->
+ 
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>Hello!</h1>
+</body>
+</html>
