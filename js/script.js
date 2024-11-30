@@ -7,6 +7,8 @@ const onGenerateSubmit = (e) => {
 
     e.preventDefault() // Prevents page reload on form submit
 
+    clearOuput(); // Clears previous code
+
     // Get input URL
     const url = document.getElementById('url').value; 
 
