@@ -25,6 +25,7 @@ const onGenerateSubmit = (e) => {
         // Run in 1 second
         setTimeout(() => {
             hideSpinner(); // Hide Spinner 
+            generateQRCode(url, size); // Generate QR Code
         }, 1000);
     }  
 }; 
