@@ -7,7 +7,7 @@ const onGenerateSubmit = (e) => {
 
     e.preventDefault() // Prevents page reload on form submit
 
-    clearOuput(); // Clears previous code
+    clearOutput(); // Clears previous output
 
     // Get input URL
     const url = document.getElementById('url').value; 
@@ -64,8 +64,14 @@ const hideSpinner = () => {
 };
 
 
-const clearOuput = () => {
+const clearOutput = () => {
+
+    // Clear previous QR code
     qrOutput.innerHTML = '';
+
+    // Clear previous download button
+    const dlink = document.getElementById('dlink');
+    if(dlink) dlink.remove();
 }
 
 const createSaveBtn = (saveUrl) => {
