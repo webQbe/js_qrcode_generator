@@ -13,10 +13,18 @@ const onGenerateSubmit = (e) => {
     // Get selected QR code size
     const size = document.getElementById('size').value; 
 
-    console.log(url, size);
+    // Check for blank input
+    if(url === ''){
+
+        alert('Please enter a URL');
+
+    } else {
+
+        showSpinner(); // Show loading spinner
+
+    }  
 
 }; 
-
 
 
 // Listen for submit event in form element
