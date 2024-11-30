@@ -28,6 +28,13 @@ const onGenerateSubmit = (e) => {
         setTimeout(() => {
             hideSpinner(); // Hide Spinner 
             generateQRCode(url, size); // Generate QR Code
+
+            // Run in 50 ms
+            setTimeout(() => {
+                // Get QR Code Image URL
+                const saveUrl = qrOutput.querySelector('img').src;
+                // Create download button with link
+                createSaveBtn(saveUrl); }, 50);
         }, 1000);
     }  
 }; 
