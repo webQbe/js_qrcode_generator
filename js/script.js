@@ -61,6 +61,35 @@ const clearOuput = () => {
     qrOutput.innerHTML = '';
 }
 
+const createSaveBtn = (saveUrl) => {
+    // Create download link
+    const dlink = document.createElement('a');
+    dlink.id = 'dlink'; // Add an ID
+    dlink.classList = 'bg-red-500 hover:bg-red-700 text-white font-bold py-2 rounded w-1/3 m-auto my-5'; /* Tailwind CSS classes - 
+        bg-red-500      : Sets the background color to a specific shade of red.
+        hover:bg-red-700: Changes the background color to a darker shade of 
+                          red when the user hovers over the element.
+        text-white      : Sets the text color to white.
+        font-bold       : Makes the text bold.
+        py-2            : Adds vertical padding of 0.5rem 
+                          (based on Tailwind's spacing scale).
+        rounded         : Adds rounded corners to the element.
+        w-1/3           : Sets the width to one-third of the parent container.
+        m-auto          : Centers the element horizontally by applying equal margins.
+        my-5            : Adds vertical margins of 1.25rem to 
+                          separate the element from adjacent content.  */
+
+    dlink.href = saveUrl; // Add QR code image URL
+    dlink.download = 'qrcode'; /* Specifying the target resource -
+        'qrcode': Sets the default filename to qrcode. 
+         When the user clicks the download link, the file will be saved as 'qrcode' (with the appropriate file extension, such as .png or .jpg, based on the resource being downloaded).
+        */
+    dlink.innerHTML = 'Download QR Code' // Display text
+    document.getElementById('output').appendChild(dlink); // Append to container
+
+};
+
+
 // Hide spinner by default
 hideSpinner();
 
