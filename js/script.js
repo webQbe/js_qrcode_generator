@@ -1,6 +1,6 @@
 // Define DOM Elements
 const form = document.getElementById('generate-form');
-const qr = document.getElementById('qrcode');
+const qrOutput = document.getElementById('qrcode');
 
 
 const onGenerateSubmit = (e) => {
@@ -53,6 +53,11 @@ const hideSpinner = () => {
     document.getElementById('spinner').style.display = 'none';
 
 };
+
+
+const clearOuput = () => {
+    qrOutput.innerHTML = '';
+}
 
 // Hide spinner by default
 hideSpinner();
