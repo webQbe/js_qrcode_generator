@@ -22,14 +22,22 @@ const onGenerateSubmit = (e) => {
 
         showSpinner(); // Show loading spinner
 
-        // Hide spinner in 1 second
+        // Run in 1 second
         setTimeout(() => {
-            hideSpinner();
+            hideSpinner(); // Hide Spinner 
         }, 1000);
-        
     }  
-
 }; 
+
+// Generate QR Code with QRCode.js Library
+const generateQRCode = (url, size) => {
+    // Call QRCode constructor, with #qrcode element where the QR code will be rendered. 
+    const qrcode = new QRCode( 'qrcode', {
+                    text: url, // URL to encode in the QR code
+                    width: size, // The dimensions of the QR code
+                    height: size,
+                });
+};
 
 const showSpinner = () => {
 
