@@ -21,11 +21,27 @@ const onGenerateSubmit = (e) => {
     } else {
 
         showSpinner(); // Show loading spinner
-
+        
     }  
 
 }; 
 
+const showSpinner = () => {
+
+    // Select #spinner and display
+    document.getElementById('spinner').style.display = 'block';
+
+};
+
+const hideSpinner = () => {
+
+    // Select #spinner and hide
+    document.getElementById('spinner').style.display = 'none';
+
+};
+
+// Hide spinner by default
+hideSpinner();
 
 // Listen for submit event in form element
 form.addEventListener('submit', onGenerateSubmit);
