@@ -21,6 +21,11 @@ const onGenerateSubmit = (e) => {
     } else {
 
         showSpinner(); // Show loading spinner
+
+        // Hide spinner in 1 second
+        setTimeout(() => {
+            hideSpinner();
+        }, 1000);
         
     }  
 
